@@ -1,0 +1,33 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "my blog backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development node --harmony index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "kk",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.3.0",
+    "config-lite": "^2.1.0",
+    "cross-env": "^5.1.3",
+    "express": "^4.16.2",
+    "express-winston": "^2.4.0",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^5.0.0-rc0",
+    "supervisor": "^0.12.0",
+    "winston": "^2.4.0"
+  }
+}
