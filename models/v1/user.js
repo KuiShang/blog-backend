@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-
+import userdata from '../../initdata/user'
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
@@ -9,5 +9,12 @@ const userSchema = new Schema({
 })
 
 const User = mongoose.model('User', userSchema)
+User.findOne((err, data) => {
+	if (!data) {
+		userdata.forEach(item => {
+			User.create(item)
+		})
+	}
+})
 
 export default User
