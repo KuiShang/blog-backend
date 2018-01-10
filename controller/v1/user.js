@@ -3,9 +3,9 @@ import {getToken} from '../../auth/auth'
 import formidable from 'formidable'
 class User {
     constructor() {
-
     }
     async getToken(req, res, next) {
+        console.log('token comming')
         const form = new formidable.IncomingForm();
         form.parse(req, async(err, fields, files) => {
             const {
@@ -28,6 +28,7 @@ class User {
                             message: '认证失败，密码错误'
                         })
                     } else {
+                        res.cookie("user", {username: username}, {maxAge: 600000 , httpOnly: false});
                         var token = getToken(user)
                         // json格式返回token
                         res.json({
@@ -50,14 +51,18 @@ class User {
 
     }
     async getUserInfo(req, res, next) {
-        const user = await UserModel.findOne({
-            username
-        })
-        res.json({
-            success: true,
-            message: JSON.stringify(user),
-            token: token
-        });
+        console.log(req.cookies)
+        // if(req.cookies.user !== null){
+        //   console.log(req.cookies.user)
+        // }
+        // const user = await UserModel.findOne({
+        //     username
+        // })
+        // res.json({
+        //     success: true,
+        //     message: JSON.stringify(user),
+        //     token: token
+        // });
     }
 }
 export default new User()

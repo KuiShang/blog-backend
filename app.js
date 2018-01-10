@@ -5,8 +5,10 @@ import router from './routes/index.js'
 import winston from 'winston'
 import expressWinston from 'express-winston'
 import chalk from 'chalk'
-import {verify} from '../../auth/auth'
+var cookieParser = require('cookie-parser');
+import {verify} from './auth/auth'
 const app = express()
+app.use(cookieParser());
 app.all('*', (req, res, next) => {
     console.log(req)
     console.log(res)
@@ -15,23 +17,23 @@ app.all('*', (req, res, next) => {
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
     res.header("Access-Control-Allow-Credentials", true); //可以带cookies
     res.header("X-Powered-By", 'kk.5.2.1')
-    if (req.path !== 'auth') {
-        if (!req.headers.Authorization) {
-            res.send({
-                status: 0,
-                type: 'SAVE_USER_FAILED',
-                message: 'NO TOKEN',
-            })
-        }
-        verify(req.headers.Authorization, (err, decode) => {
-            if (err) {
-                res.json({err:err})
-            } else {
-                console.log(decode)
-                next()
-            }
-        })
-    }
+    // if (req.path !== 'auth') {
+    //     if (!req.headers.Authorization) {
+    //         res.send({
+    //             status: 0,
+    //             type: 'SAVE_USER_FAILED',
+    //             message: 'NO TOKEN',
+    //         })
+    //     }
+    //     verify(req.headers.Authorization, (err, decode) => {
+    //         if (err) {
+    //             res.json({err:err})
+    //         } else {
+    //             console.log(decode)
+    //             next()
+    //         }
+    //     })
+    // }
     if (req.method == 'OPTIONS') {
         res.send(200);
     } else {
