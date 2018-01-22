@@ -51,18 +51,26 @@ class User {
 
     }
     async getUserInfo(req, res, next) {
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         console.log(req.cookies)
-        // if(req.cookies.user !== null){
-        //   console.log(req.cookies.user)
-        // }
-        // const user = await UserModel.findOne({
-        //     username
-        // })
-        // res.json({
-        //     success: true,
-        //     message: JSON.stringify(user),
-        //     token: token
-        // });
+        let username = req.cookies.user.username
+        try {
+            const user = await UserModel.findOne({
+                username
+            })
+            res.json({
+                success: true,
+                data: user,
+                status: 0
+            })
+        } catch (error) {
+            res.send({
+                status: 10002,
+                type: 'SAVE_USER_FAILED',
+                message: '登陆失败',
+            })
+        }
+
     }
 }
 export default new User()
