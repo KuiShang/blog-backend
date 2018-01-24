@@ -6,8 +6,8 @@ const catalogSchema = new Schema({
 	catalog_id: Number,
 	name: String,
     des: String,
-    create_time: string,
-    modify_time: string
+    create_time: String,
+    modify_time: String
 })
 
 const Catalog = mongoose.model('catalog', catalogSchema)
