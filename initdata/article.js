@@ -8,6 +8,7 @@ export default [{
     "banner": "https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg",
     "tagNames": "我们是谁,canvas实例,canvas",
     "catalogName": "小作品",
+    "status": 1,
     "tags": [{
         "id": "48b28d4a-80a2-40dc-a59e-3b05a8d672c4",
         "name": "我们是谁"
@@ -28,6 +29,7 @@ export default [{
     "banner": "",
     "tagNames": "vue",
     "catalogName": "技术分享",
+    "status": 1,
     "tags": [{
         "id": "fb6bd110-1c1c-41ef-b7be-c67cc76ea9a6",
         "name": "vue"

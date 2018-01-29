@@ -3,18 +3,19 @@ import tagdata from '../../initdata/tag'
 const Schema = mongoose.Schema
 
 const tagSchema = new Schema({
-	tag_id: Number,
 	name: String,
     articleCount: Number
 })
-
-const tag = mongoose.model('tag', tagSchema)
-tag.findOne((err, data) => {
+tagSchema.statics.getTagNameById = async function (id) {
+    return await this.find({ '_id': id}, 'name');
+}
+const Tag = mongoose.model('tag', tagSchema)
+Tag.findOne((err, data) => {
 	if (!data) {
 		tagdata.forEach(item => {
-			tag.create(item)
+			Tag.create(item)
 		})
 	}
 })
 
-export default tag
+export default Tag

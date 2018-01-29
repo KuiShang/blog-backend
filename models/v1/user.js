@@ -3,12 +3,11 @@ import userdata from '../../initdata/user'
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-	user_id: Number,
 	username: String,
 	password: String,
 })
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model('user', userSchema)
 User.findOne((err, data) => {
 	if (!data) {
 		userdata.forEach(item => {
