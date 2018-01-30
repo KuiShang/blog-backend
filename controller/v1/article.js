@@ -1,10 +1,11 @@
 import ArticleModel from '../../models/v1/article'
 import formidable from 'formidable'
 import BaseControl from '../base/baseControl';
+import logger from '../../log4js'
 class Article extends BaseControl {
     constructor() {
         super()
-        this.publish = this.publish.bind(this)
+        this.save = this.save.bind(this)
         this.getList = this.getList.bind(this)
         this._addCatalogName = this._addCatalogName.bind(this)
         this._addTagName = this._addTagName.bind(this)
@@ -34,47 +35,55 @@ class Article extends BaseControl {
             page_size,
             'data': article_arr
           }
+          logger.debug('文章列表:',data)
           res.json({
             success: true,
             data: data,
             status: 0
           })
         } catch (error) {
-            console.log(error)
+            logger.error(error)
             res.send({
-                status: 10004,
+                status: 10006,
                 type: 'SAVE_ARTICLE_FAILED',
                 message: '查询文章失败',
             })
         }
     }
-    async publish(req, res, next) {
+    async save(req, res, next) {
         const form = new formidable.IncomingForm();
         try {
          form.parse(req, async(err, fields, files) => {
-            // console.log(fields)
+					 logger.info(fields)
             let create_time, modify_time
             create_time = modify_time = Date.now()
             let id = this.uuid()
             fields = {...fields, create_time, modify_time, id} 
-            ArticleModel.create(fields, (err, article) => {
-                if (err) {
-                    console.log(err)
-                    res.send({
-                        status: 10005,
-                        type: 'SAVE_ARTICLE_FAILED',
-                        message: '保存文章失败',
-                    })
-                } else {
-                    res.send({
-                        status: 0,
-                        success: true,
-                        data: article
-                    })
-                }
-            })
-
-            console.log(fields)
+            // ArticleModel.create(fields, (err, article) => {
+            //     if (err) {
+            //         console.log(err)
+            //         res.send({
+            //             status: 10005,
+            //             type: 'SAVE_ARTICLE_FAILED',
+            //             message: '保存文章失败',
+            //         })
+            //     } else {
+            //         res.send({
+            //             status: 0,
+            //             success: true,
+            //             data: article
+            //         })
+            //     }
+						// })
+						// ArticleModel.saveContent({content:fields.content, 'article_id': id})
+						// let ret = await ArticleModel.create(fields)
+						let [article, content] = await Promise.all([ArticleModel.create(fields), ArticleModel.saveContent({content:fields.content, 'article_id': id})]);
+						res.send({
+								status: 0,
+								success: true,
+								data: article
+						})
+            logger.info(article)
          })
         } catch (error) {
             res.send({
@@ -130,6 +139,51 @@ class Article extends BaseControl {
           }
         return articleArr
     }
+    async deleteById (req, res, next) {
+	        try {
+					let id = req.params.id
+					logger.debug('article-id:', id)
+					let ret = await ArticleModel.remove({id}).exec()
+					res.send({
+						status: 0,
+						data: ret,
+						success: true,
+					})
+        } catch (error) {
+					logger.error(error)
+					res.send({
+						status: 10007,
+						type: 'DELETE_ARTICLE_FAILED',
+						message: '删除文章失败',
+				})
+        }
+
+		}
+		async patch (req, res, next) {
+			try {
+				let id = req.params.id
+				const form = new formidable.IncomingForm();
+				form.parse(req, async(err, fields, files) => {
+					let key = Object.keys(fields)[0]
+					let value = Object.values(fields)[0]
+					logger.info(fields)
+					let ret = await ArticleModel.update({id},{[key]: value})
+					logger.debug(ret)
+					res.send({
+						status: 0,
+						success: true,
+						data: ret
+					})
+				})
+			} catch (error) {
+				logger.error(error)
+				res.send({
+					status: 10008,
+					type: 'PATH_ARTICLE_FAILED',
+					message: '修改失败',
+				})
+			}
+		}
 }
 
 export default new Article()

@@ -10,6 +10,12 @@ export default [{
 },
 {
 	nacontentme: '“也许我可以。”',
+},
+{
+	nacontentme: '“你拉着我说你有些鱿鱼。”',
+},
+{
+	nacontentme: '“念念不忘，必有回响。”',
 }]
 
 

@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 import articledata from '../../initdata/article'
 import CatalogModel from './catalog'
+import ContentModel from './content'
 import TagModel from './tag'
 
 const Schema = mongoose.Schema
@@ -21,6 +22,9 @@ articleSchema.statics.getCatalogNameById = function (id) {
 }
 articleSchema.statics.getTagNameById = function (id) {
     return TagModel.getTagNameById(id);
+}
+articleSchema.statics.saveContent = function (content) {
+    return ContentModel.create(content);
 }
 
 const Article = mongoose.model('article', articleSchema)
