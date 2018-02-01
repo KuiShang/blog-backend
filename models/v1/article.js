@@ -26,6 +26,18 @@ articleSchema.statics.getTagNameById = function (id) {
 articleSchema.statics.saveContent = function (content) {
     return ContentModel.create(content);
 }
+articleSchema.statics.getContent = function (id) {
+    return ContentModel.findOne(id);
+}
+articleSchema.statics.updateContent = function (id, content) {
+    return ContentModel.update({'article_id': id}, {
+        content
+    });
+}
+
+articleSchema.statics.removeContent = function (id) {
+    return ContentModel.remove({'article_id': id});
+}
 
 const Article = mongoose.model('article', articleSchema)
 Article.findOne((err, data) => {

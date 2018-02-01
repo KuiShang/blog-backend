@@ -8,39 +8,42 @@ class Article extends BaseControl {
         this.save = this.save.bind(this)
         this.getList = this.getList.bind(this)
         this._addCatalogName = this._addCatalogName.bind(this)
-        this._addTagName = this._addTagName.bind(this)
-        
+				this._addTagName = this._addTagName.bind(this)
+				this.getArticle = this.getArticle.bind(this)
+
     }
     async getList(req, res, next) {
         try {
-          let page_size = Number(req.query.page_size)
-          let current_page =Number(req.query.current_page)
-          if (current_page !== 0) {
-            current_page = current_page - 1
-          }
-          function getArticle () {
-            return ArticleModel.find({})
-            .skip(current_page * page_size)
-            .limit(page_size)
-          }
-          function getCount () {
-            return ArticleModel.count({})
-          }
-          let [articleArr, total] = await Promise.all([getArticle(), getCount()]);
-          let articleArrTemp  = await this._addCatalogName(articleArr)
-          let article_arr = await this._addTagName(articleArrTemp)
-          let data = {
-            total,
-            current_page,
-            page_size,
-            'data': article_arr
-          }
-          logger.debug('文章列表:',data)
-          res.json({
-            success: true,
-            data: data,
-            status: 0
-          })
+            let page_size = Number(req.query.page_size)
+            let current_page = Number(req.query.current_page)
+            if (current_page !== 0) {
+                current_page = current_page - 1
+            }
+
+            function getArticle() {
+                return ArticleModel.find({})
+                    .skip(current_page * page_size)
+                    .limit(page_size)
+            }
+
+            function getCount() {
+                return ArticleModel.count({})
+            }
+            let [articleArr, total] = await Promise.all([getArticle(), getCount()]);
+            let articleArrTemp = await this._addCatalogName(articleArr)
+            let article_arr = await this._addTagName(articleArrTemp)
+            let data = {
+                total,
+                current_page,
+                page_size,
+                'data': article_arr
+            }
+            logger.debug('文章列表:', data)
+            res.json({
+                success: true,
+                data: data,
+                status: 0
+            })
         } catch (error) {
             logger.error(error)
             res.send({
@@ -53,38 +56,45 @@ class Article extends BaseControl {
     async save(req, res, next) {
         const form = new formidable.IncomingForm();
         try {
-         form.parse(req, async(err, fields, files) => {
-					 logger.info(fields)
-            let create_time, modify_time
-            create_time = modify_time = Date.now()
-            let id = this.uuid()
-            fields = {...fields, create_time, modify_time, id} 
-            // ArticleModel.create(fields, (err, article) => {
-            //     if (err) {
-            //         console.log(err)
-            //         res.send({
-            //             status: 10005,
-            //             type: 'SAVE_ARTICLE_FAILED',
-            //             message: '保存文章失败',
-            //         })
-            //     } else {
-            //         res.send({
-            //             status: 0,
-            //             success: true,
-            //             data: article
-            //         })
-            //     }
-						// })
-						// ArticleModel.saveContent({content:fields.content, 'article_id': id})
-						// let ret = await ArticleModel.create(fields)
-						let [article, content] = await Promise.all([ArticleModel.create(fields), ArticleModel.saveContent({content:fields.content, 'article_id': id})]);
-						res.send({
-								status: 0,
-								success: true,
-								data: article
-						})
-            logger.info(article)
-         })
+            form.parse(req, async (err, fields, files) => {
+                logger.info(fields)
+                let create_time, modify_time
+                create_time = modify_time = Date.now()
+                let id = this.uuid()
+                fields = { ...fields,
+                    create_time,
+                    modify_time,
+                    id
+                }
+                // ArticleModel.create(fields, (err, article) => {
+                //     if (err) {
+                //         console.log(err)
+                //         res.send({
+                //             status: 10005,
+                //             type: 'SAVE_ARTICLE_FAILED',
+                //             message: '保存文章失败',
+                //         })
+                //     } else {
+                //         res.send({
+                //             status: 0,
+                //             success: true,
+                //             data: article
+                //         })
+                //     }
+                // })
+                // ArticleModel.saveContent({content:fields.content, 'article_id': id})
+                // let ret = await ArticleModel.create(fields)
+                let [article, content] = await Promise.all([ArticleModel.create(fields), ArticleModel.saveContent({
+                    content: fields.content,
+                    'article_id': id
+                })]);
+                res.send({
+                    status: 0,
+                    success: true,
+                    data: article
+                })
+                logger.info(article)
+            })
         } catch (error) {
             res.send({
                 status: 10004,
@@ -93,7 +103,7 @@ class Article extends BaseControl {
             })
         }
     }
-    async _addCatalogName (articleArr) {
+    async _addCatalogName(articleArr) {
         // articleArr.forEach ( async (article,idx) => {
         //     let catalog_id = article.catalog_id
         //     let ret = await ArticleModel.getCatalogNameById(catalog_id)
@@ -114,7 +124,7 @@ class Article extends BaseControl {
             let article_copy = article.toObject()
             article_copy.catalog_name = name
             arr.push(article_copy)
-          }
+        }
         // console.log(arr)
         return arr
 
@@ -125,7 +135,7 @@ class Article extends BaseControl {
         // console.log(arr)
         // return arr
     }
-    async _addTagName (articleArr) {
+    async _addTagName(articleArr) {
         for (let article of articleArr) {
             let arr = []
             for (let tagId of article.tag_ids) {
@@ -136,54 +146,117 @@ class Article extends BaseControl {
                 arr.push(tagObj)
             }
             article.tags = arr
-          }
+        }
         return articleArr
     }
-    async deleteById (req, res, next) {
-	        try {
-					let id = req.params.id
-					logger.debug('article-id:', id)
-					let ret = await ArticleModel.remove({id}).exec()
-					res.send({
-						status: 0,
-						data: ret,
-						success: true,
-					})
+    async deleteById(req, res, next) {
+        try {
+            let id = req.params.id
+            logger.debug('article-id:', id)
+            // let ret = await ArticleModel.remove({
+            //     id
+						// }).exec()
+						// ArticleModel.removeContent(id)
+						let [article_ret, content_ret] = await Promise.all([ArticleModel.remove({id}).exec(), ArticleModel.removeContent(id)])
+            res.send({
+                status: 0,
+                data: article_ret,
+                success: true,
+            })
         } catch (error) {
-					logger.error(error)
-					res.send({
-						status: 10007,
-						type: 'DELETE_ARTICLE_FAILED',
-						message: '删除文章失败',
-				})
+            logger.error(error)
+            res.send({
+                status: 10007,
+                type: 'DELETE_ARTICLE_FAILED',
+                message: '删除文章失败',
+            })
         }
 
+    }
+    async patch(req, res, next) {
+        try {
+            let id = req.params.id
+            const form = new formidable.IncomingForm();
+            form.parse(req, async (err, fields, files) => {
+                let key = Object.keys(fields)[0]
+                let value = Object.values(fields)[0]
+                logger.info(fields)
+                let ret = await ArticleModel.update({
+                    id
+                }, {
+                    [key]: value
+                })
+                logger.debug(ret)
+                res.send({
+                    status: 0,
+                    success: true,
+                    data: ret
+                })
+            })
+        } catch (error) {
+            logger.error(error)
+            res.send({
+                status: 10008,
+                type: 'PATH_ARTICLE_FAILED',
+                message: '修改失败',
+            })
+        }
+    }
+    async getArticle(req, res, next) {
+        try {
+            let id = req.params.id
+            logger.debug(id)
+            // let ret = await ArticleModel.find({
+            //     id
+						// })
+						// let content = ArticleModel.getContent({id})
+						let [article, content] = await Promise.all([ArticleModel.find({id}), ArticleModel.getContent({'article_id': id})])
+						let articleArrTemp = await this._addCatalogName(article)
+						let article_arr = await this._addTagName(articleArrTemp)
+						let arrticle = article_arr[0]
+						arrticle.content = content.content
+						logger.debug(arrticle)
+            res.send({
+                status: 0,
+                success: true,
+                data: arrticle
+            })
+        } catch (error) {
+            logger.error(error)
+            res.send({
+                status: 10009,
+                type: 'GET_ARTICLE_FAILED',
+                message: '获取文章失败',
+            })
+
+        }
 		}
-		async patch (req, res, next) {
+		async put (req, res, next) {
+			const form = new formidable.IncomingForm();
 			try {
-				let id = req.params.id
-				const form = new formidable.IncomingForm();
-				form.parse(req, async(err, fields, files) => {
-					let key = Object.keys(fields)[0]
-					let value = Object.values(fields)[0]
-					logger.info(fields)
-					let ret = await ArticleModel.update({id},{[key]: value})
-					logger.debug(ret)
-					res.send({
-						status: 0,
-						success: true,
-						data: ret
-					})
+				form.parse(req, async (err, fields, files) => {
+						logger.info('fields', fields)
+						let modify_time = Date.now()
+						let id = fields.id
+						fields = { ...fields,
+								modify_time	
+						}
+						let [article, content] = await Promise.all([ArticleModel.update({id}, fields), ArticleModel.updateContent(id, fields.content)]);
+						res.send({
+								status: 0,
+								success: true,
+								data: article
+						})
+						logger.info('article', article)
 				})
 			} catch (error) {
-				logger.error(error)
 				res.send({
-					status: 10008,
-					type: 'PATH_ARTICLE_FAILED',
-					message: '修改失败',
+						status: 10010,
+						type: 'MODIFY_ARTICLE_FAILED',
+						message: '修改文章失败',
 				})
 			}
-		}
+	}
 }
 
 export default new Article()

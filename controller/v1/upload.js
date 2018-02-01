@@ -1,5 +1,6 @@
 import formidable from 'formidable'
 import path from 'path'
+import BaseControl from '../base/baseControl'
 import fs from 'fs'
 import logger from '../../log4js'
 class Upload extends BaseControl {
@@ -13,7 +14,8 @@ class Upload extends BaseControl {
             const image_path = await this._getPath(req);
             res.send({
 				status: 0,
-				image_path,
+                image_path,
+                success: true
 			})
         } catch (error) {
             res.send({

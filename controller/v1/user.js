@@ -29,7 +29,8 @@ class User {
                         })
                     } else {
                         res.cookie("user", {username: username}, {maxAge: 600000 , httpOnly: false});
-                        var token = getToken(user)
+                        // var token = getToken(user)
+                        var token = '123123'
                         // json格式返回token
                         res.json({
                             success: true,
@@ -53,7 +54,8 @@ class User {
     async getUserInfo(req, res, next) {
         console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         console.log(req.cookies)
-        let username = req.cookies.user.username
+        // let username = req.cookies.user.username
+        let username = 'kk'
         try {
             const user = await UserModel.findOne({
                 username
