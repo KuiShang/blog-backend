@@ -1,11 +1,11 @@
 import express from 'express'
-// import db from './mongodb/db.js'
+import './mongodb/db.js'
 import config from './config'
 import router from './routes/index.js'
 // import winston from 'winston'
 // import expressWinston from 'express-winston'
 import chalk from 'chalk'
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser')
 // import {
 // 	verify
 // } from './auth/auth'
@@ -37,7 +37,7 @@ app.all('*', (req, res, next) => {
 	//     })
 	// }
 	if (req.method === 'OPTIONS') {
-		res.send(200)
+		res.sendStatus(200)
 	} else {
 		next()
 	}
@@ -54,5 +54,5 @@ var server = app.listen(config.port, () => {
 	var host = server.address().address
 	var port = server.address().port
 
-	chalk.green('Example app listening at http://%s:%s', host, port)
+	console.log(chalk.blue('Example app listening at http://%s:%s', host, port))
 })

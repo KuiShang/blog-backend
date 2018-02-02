@@ -3,7 +3,7 @@ import path from 'path'
 import BaseControl from '../base/baseControl'
 import fs from 'fs'
 import logger from '../../log4js'
-import { error } from 'util';
+// import { error } from 'util'
 class Upload extends BaseControl {
 	constructor () {
 		super()
