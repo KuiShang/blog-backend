@@ -1,3 +1,4 @@
+/*eslint-disable*/
 export default [{
     "id": "41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19",
     "title": "蹭一波最近的热度，我们是谁？ 在线生成",

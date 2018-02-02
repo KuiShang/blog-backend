@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const contentSchema = new Schema({
 	article_id: String,
-    content: String
+	content: String
 })
 
 const content = mongoose.model('content', contentSchema)
