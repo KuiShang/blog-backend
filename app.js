@@ -47,7 +47,7 @@ router(app)
 app.use(express.static('./public'))
 
 app.get('/', function (req, res) {
-	console.log(12)
+	console.log('Hello World!')
 	res.send('Hello World!')
 })
 var server = app.listen(config.port, () => {

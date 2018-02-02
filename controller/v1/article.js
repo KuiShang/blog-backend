@@ -28,7 +28,7 @@ class Article extends BaseControl {
 			function getCount () {
 				return ArticleModel.count({})
 			}
-			let [articleArr, total] = await Promise.all([getArticle(), getCount()]);
+			let [articleArr, total] = await Promise.all([getArticle(), getCount()])
 			let articleArrTemp = await this._addCatalogName(articleArr)
 			let article_arr = await this._addTagName(articleArrTemp)
 			let data = {
@@ -97,7 +97,7 @@ class Article extends BaseControl {
 							content: fields.content,
 							'article_id': id
 						}),
-						ArticleModel.saveToCatalog()
+						ArticleModel.saveToCatalog(fields.catalog_id, fields.id)
 					])
 				res.send({
 					status: 0,
@@ -184,13 +184,20 @@ class Article extends BaseControl {
 				message: '删除文章失败'
 			})
 		}
-
 	}
 	async patch (req, res, next) {
 		try {
 			let id = req.params.id
-			const form = new formidable.IncomingForm();
+			const form = new formidable.IncomingForm()
 			form.parse(req, async (err, fields, files) => {
+				if (err) {
+					res.send({
+						status: 10010,
+						type: 'FORM_DATA_ERROR',
+						message: '表单信息错误'
+					})
+					return
+				}
 				let key = Object.keys(fields)[0]
 				let value = Object.values(fields)[0]
 				logger.info(fields)
@@ -211,7 +218,7 @@ class Article extends BaseControl {
 			res.send({
 				status: 10008,
 				type: 'PATH_ARTICLE_FAILED',
-				message: '修改失败',
+				message: '修改失败'
 			})
 		}
 	}
@@ -243,24 +250,31 @@ class Article extends BaseControl {
 			res.send({
 				status: 10009,
 				type: 'GET_ARTICLE_FAILED',
-				message: '获取文章失败',
+				message: '获取文章失败'
 			})
-
 		}
 	}
 	async put (req, res, next) {
-		const form = new formidable.IncomingForm();
+		const form = new formidable.IncomingForm()
 		try {
 			form.parse(req, async (err, fields, files) => {
+				if (err) {
+					res.send({
+						status: 10010,
+						type: 'FORM_DATA_ERROR',
+						message: '表单信息错误'
+					})
+					return
+				}
 				logger.info('fields', fields)
 				let modify_time = Date.now()
 				let id = fields.id
 				fields = { ...fields,
 					modify_time
 				}
-				let [article, content] = await Promise.all([ArticleModel.update({
+				let [article] = await Promise.all([ArticleModel.update({
 					id
-				}, fields), ArticleModel.updateContent(id, fields.content)]);
+				}, fields), ArticleModel.updateContent(id, fields.content)])
 				res.send({
 					status: 0,
 					success: true,
@@ -272,7 +286,7 @@ class Article extends BaseControl {
 			res.send({
 				status: 10010,
 				type: 'MODIFY_ARTICLE_FAILED',
-				message: '修改文章失败',
+				message: '修改文章失败'
 			})
 		}
 	}

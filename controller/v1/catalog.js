@@ -19,7 +19,7 @@ class Catalog {
 		}
 	}
 	async addCatalog (req, res, next) {
-		const form = new formidable.IncomingForm();
+		const form = new formidable.IncomingForm()
 		try {
 			form.parse(req, async (err, fields, files) => {
 				logger.info(fields)

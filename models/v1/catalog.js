@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const catalogSchema = new Schema({
 	name: String,
 	des: String,
+	article_ids: Array,
 	create_time: String,
 	modify_time: String
 })

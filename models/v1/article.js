@@ -1,4 +1,4 @@
-import mongoose, { Error } from 'mongoose'
+import mongoose from 'mongoose'
 import articledata from '../../initdata/article'
 import CatalogModel from './catalog'
 import ContentModel from './content'
@@ -17,10 +17,19 @@ const articleSchema = new Schema({
 	tag_ids: Array
 })
 
-articleSchema.statics.saveToCatalog = function (id) {
-	return ContentModel.remove({
-		'article_id': id
+articleSchema.statics.saveToCatalog = function (catalogId, articleId) {
+	console.log(catalogId, articleId)
+	return CatalogModel.findOne({'_id': catalogId}, (err, doc) => {
+		if (err) {
+			throw err
+		}
+		console.log(doc)
+		doc.article_ids.push(articleId)
+		doc.save()
 	})
+	// {
+	// 	'article_id': articleId
+	// }
 }
 
 articleSchema.statics.getCatalogNameById = function (id) {
