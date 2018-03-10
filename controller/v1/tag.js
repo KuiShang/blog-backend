@@ -1,24 +1,24 @@
-import CatalogModel from '../../models/v1/catalog'
+import TagModel from '../../models/v1/tag'
 import formidable from 'formidable'
 import logger from '../../log4js'
-class Catalog {
-	async getCatalogList (req, res, next) {
+class Tag {
+	async getTagList (req, res, next) {
 		try {
-			const catalog = await CatalogModel.find()
+			const tag = await TagModel.find()
 			res.json({
 				success: true,
-				data: catalog,
+				data: tag,
 				status: 0
 			})
 		} catch (error) {
 			res.send({
-				status: 10021,
-				type: 'SAVE_CATALOG_FAILED',
-				message: '查询目录失败'
+				status: 10004,
+				type: 'SAVE_TAG_FAILED',
+				message: '查询标签失败'
 			})
 		}
 	}
-	async addCatalog (req, res, next) {
+	async addTag (req, res, next) {
 		const form = new formidable.IncomingForm()
 		try {
 			form.parse(req, async (err, fields, files) => {
@@ -31,13 +31,7 @@ class Catalog {
 					})
 					return
 				}
-				let create_time, modify_time
-				create_time = modify_time = Date.now()
-				fields = { ...fields,
-					create_time,
-					modify_time
-				}
-				let ret = await CatalogModel.create(fields)
+				let ret = await TagModel.create(fields)
 				res.send({
 					status: 0,
 					success: true,
@@ -46,17 +40,17 @@ class Catalog {
 			})
 		} catch (error) {
 			res.send({
-				status: 10012,
+				status: 10021,
 				type: 'ADD_CATALOG_FAILED',
-				message: '添加目录失败'
+				message: '添加标签失败'
 			})
 		}
 	}
-	async getCatalog (req, res, next) {
+	async getTag (req, res, next) {
 		try {
 			let id = req.params.id
 			logger.debug(id)
-			let ret = await CatalogModel.findOne({
+			let ret = await TagModel.findOne({
 				'_id': id
 			})
 			logger.debug(ret)
@@ -70,7 +64,7 @@ class Catalog {
 			res.send({
 				status: 10023,
 				type: 'GET_ARTICLE_FAILED',
-				message: '获取目录失败'
+				message: '获取标签失败'
 			})
 		}
 	}
@@ -88,11 +82,7 @@ class Catalog {
 					})
 					return
 				}
-				let modify_time = Date.now()
-				fields = { ...fields,
-					modify_time
-				}
-				let ret = await CatalogModel.update({
+				let ret = await TagModel.update({
 					'_id': id
 				}, fields)
 				res.send({
@@ -106,10 +96,10 @@ class Catalog {
 			res.send({
 				status: 10010,
 				type: 'MODIFY_ARTICLE_FAILED',
-				message: '修改目录失败'
+				message: '修改标签失败'
 			})
 		}
 	}
 }
 
-export default new Catalog()
+export default new Tag()
