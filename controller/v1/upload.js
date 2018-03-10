@@ -13,11 +13,9 @@ class Upload extends BaseControl {
 	async upload (req, res, next) {
 		try {
 			const image_path = await this._getPath(req, res, next)
-			res.send({
-				status: 0,
-				image_path,
-				success: true
-			})
+			res.send(
+				image_path
+			)
 		} catch (error) {
 			res.send({
 				status: 10004,
@@ -48,7 +46,8 @@ class Upload extends BaseControl {
 				const repath = uploadDir + fullName
 				try {
 					await fs.rename(files.file.path, repath)
-					resolve(fullName)
+					// console.log(req)
+					resolve('http://' + req.headers.host + '/upload/' + fullName)
 				} catch (err) {
 					console.log('保存图片失败', err)
 					fs.unlink(files.file.path)

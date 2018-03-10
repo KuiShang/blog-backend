@@ -27,9 +27,21 @@ articleSchema.statics.saveToCatalog = function (catalogId, articleId) {
 		doc.article_ids.push(articleId)
 		doc.save()
 	})
-	// {
-	// 	'article_id': articleId
-	// }
+}
+
+articleSchema.statics.saveToTag = function (tagIds, articleId) {
+	console.log(tagIds, articleId)
+	for (let i = 0; i < tagIds.length; i++) {
+		let tagid = tagIds[i]
+		TagModel.findOne({'_id': tagid}, (err, doc) => {
+			if (err) {
+				throw err
+			}
+			console.log(doc)
+			doc.article_ids.push(articleId)
+			doc.save()
+		})
+	}
 }
 
 articleSchema.statics.getCatalogNameById = function (id) {

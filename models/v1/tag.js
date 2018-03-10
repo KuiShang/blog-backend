@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const tagSchema = new Schema({
 	name: String,
+	article_ids: Array,
 	articleCount: Number
 })
 tagSchema.statics.getTagNameById = async function (id) {

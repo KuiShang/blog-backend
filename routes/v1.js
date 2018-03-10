@@ -20,7 +20,14 @@ router.get('/catalog/:id', catalog.getCatalog)
 router.put('/catalog/:id', catalog.put)
 
 /*  ---------标签----------   */
+// 获取所有标签
 router.get('/tag', tag.getTagList)
+// 添加一个标签
+router.post('/tag', tag.addTag)
+// 获取一个标签
+router.get('/tag/:id', tag.getTag)
+// 修改一个标签
+router.put('/tag/:id', tag.put)
 
 /*  ---------文章相关---------- */
 // 添加文章

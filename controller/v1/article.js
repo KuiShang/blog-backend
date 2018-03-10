@@ -13,6 +13,7 @@ class Article extends BaseControl {
 	}
 	async getList (req, res, next) {
 		try {
+			logger.debug('请求参数:', req.query)
 			let page_size = Number(req.query.page_size)
 			let current_page = Number(req.query.current_page)
 			if (current_page !== 0) {
@@ -33,7 +34,7 @@ class Article extends BaseControl {
 			let article_arr = await this._addTagName(articleArrTemp)
 			let data = {
 				total,
-				current_page,
+				'current_page': current_page + 1,
 				page_size,
 				'data': article_arr
 			}
@@ -97,7 +98,8 @@ class Article extends BaseControl {
 							content: fields.content,
 							'article_id': id
 						}),
-						ArticleModel.saveToCatalog(fields.catalog_id, fields.id)
+						ArticleModel.saveToCatalog(fields.catalog_id, fields.id),
+						ArticleModel.saveToTag(fields.tag_ids, fields.id)
 					])
 				res.send({
 					status: 0,
@@ -168,9 +170,9 @@ class Article extends BaseControl {
 			//     id
 			// }).exec()
 			// ArticleModel.removeContent(id)
-			let [article_ret] = await Promise.all([ArticleModel.remove({
-				id
-			}).exec(), ArticleModel.removeContent(id)])
+			let [article_ret] = await Promise.all([ArticleModel.remove({id}).exec(),
+				ArticleModel.removeContent(id)
+			])
 			res.send({
 				status: 0,
 				data: article_ret,
