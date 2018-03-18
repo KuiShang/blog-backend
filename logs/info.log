@@ -47229,3 +47229,567 @@
        __v: 0,
        catalog_name: '前端',
        tags: [Array] } ] }
+[2018-03-18T17:30:45.623] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5\'' }
+[2018-03-18T17:30:45.693] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:136:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:32:19.961] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:32:19.975] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:136:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:35:37.097] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:35:37.103] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:136:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:36:25.387] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:36:25.394] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:136:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:38:48.229] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:38:48.245] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:136:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:40:20.228] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:40:20.240] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 } ]
+[2018-03-18T17:40:20.243] [DEBUG] info - total: 2
+[2018-03-18T17:40:20.247] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:138:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:42:17.037] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:42:17.049] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 } ]
+[2018-03-18T17:42:17.052] [DEBUG] info - total: 2
+[2018-03-18T17:42:17.057] [INFO] info - query_ret: []
+[2018-03-18T17:42:17.058] [ERROR] info - TypeError: Cannot read property 'name' of undefined
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:138:28
+    at Generator.next (<anonymous>)
+    at step (/home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:191)
+    at /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1/article.js:27:361
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2018-03-18T17:44:00.752] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:44:00.763] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 } ]
+[2018-03-18T17:44:00.767] [DEBUG] info - total: 2
+[2018-03-18T17:44:00.771] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:44:00.773] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:44:00.775] [DEBUG] info - 文章列表: { total: 2,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023d,
+       id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+       title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+       summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+       banner: '',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023c,
+       id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+       title: '蹭一波最近的热度，我们是谁？ 在线生成',
+       summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+       banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] } ] }
+[2018-03-18T17:44:39.703] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:44:39.711] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 } ]
+[2018-03-18T17:44:39.714] [DEBUG] info - total: 2
+[2018-03-18T17:44:39.717] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:44:39.720] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:44:39.722] [DEBUG] info - 文章列表: { total: 2,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023d,
+       id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+       title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+       summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+       banner: '',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023c,
+       id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+       title: '蹭一波最近的热度，我们是谁？ 在线生成',
+       summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+       banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] } ] }
+[2018-03-18T17:51:48.355] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:51:48.359] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 } ]
+[2018-03-18T17:51:48.361] [DEBUG] info - total: 2
+[2018-03-18T17:51:48.364] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:51:48.371] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:51:48.372] [DEBUG] info - 文章列表: { total: 2,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023d,
+       id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+       title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+       summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+       banner: '',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023c,
+       id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+       title: '蹭一波最近的热度，我们是谁？ 在线生成',
+       summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+       banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] } ] }
+[2018-03-18T17:52:20.328] [INFO] info - __dirname /home/kk/code/VistudioCodeProjects/blog-backend/controller/v1
+[2018-03-18T17:52:20.329] [INFO] info - uploadDir /home/kk/code/VistudioCodeProjects/blog-backend/public/upload/
+[2018-03-18T17:52:20.409] [INFO] info - { file: 
+   File {
+     domain: null,
+     _events: {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     size: 459957,
+     path: '/home/kk/code/VistudioCodeProjects/blog-backend/public/upload/upload_658ad6d679dca9c9d2e9e109b95f686f',
+     name: '15111G33543-1.jpg',
+     type: 'image/jpeg',
+     hash: null,
+     lastModifiedDate: 2018-03-18T09:52:20.407Z,
+     _writeStream: 
+      WriteStream {
+        _writableState: [WritableState],
+        writable: false,
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        path: '/home/kk/code/VistudioCodeProjects/blog-backend/public/upload/upload_658ad6d679dca9c9d2e9e109b95f686f',
+        fd: null,
+        flags: 'w',
+        mode: 438,
+        start: undefined,
+        autoClose: true,
+        pos: undefined,
+        bytesWritten: 459957,
+        closed: true } } }
+[2018-03-18T17:52:26.185] [INFO] info - { content: '我是测试文章',
+  title: '测试文章',
+  summary: '我是测试文章  ',
+  banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+  catalog_id: '5aae283b67a0d9483a660238',
+  status: 2,
+  tag_ids: [ '5aae283b67a0d9483a660239' ] }
+[2018-03-18T17:52:26.286] [INFO] info - { tag_ids: [ '5aae283b67a0d9483a660239' ],
+  _id: 5aae36da9c7bc367a834590f,
+  title: '测试文章',
+  summary: '我是测试文章  ',
+  banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+  catalog_id: '5aae283b67a0d9483a660238',
+  status: 2,
+  create_time: 1521366746186,
+  modify_time: 1521366746186,
+  id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+  __v: 0 }
+[2018-03-18T17:52:26.328] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:52:26.338] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023c,
+    id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+    title: '蹭一波最近的热度，我们是谁？ 在线生成',
+    summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+    banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:52:26.341] [DEBUG] info - total: 3
+[2018-03-18T17:52:26.350] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:52:26.356] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:52:26.359] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:52:26.363] [DEBUG] info - 文章列表: { total: 3,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023d,
+       id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+       title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+       summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+       banner: '',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023c,
+       id: '41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19',
+       title: '蹭一波最近的热度，我们是谁？ 在线生成',
+       summary: '主要就是用一张空白的图，然后使用canvas把用户输入的文字画上去，比较简单。  就这样的界面，  访问地址 https://who.diamondfsd.com  PC端    移动端   ',
+       banner: 'https://file.diamondfsd.com/img/630b9da3-6b93-404f-8ea7-48f3c6a90e76.jpg',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:52:30.710] [DEBUG] info - article-id: 41bb9e5a-50bb-4a31-bfac-9f6dbbb08b19
+[2018-03-18T17:52:30.743] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:52:30.747] [DEBUG] info - articleArr: [ { tag_ids: [],
+    _id: 5aae283b67a0d9483a66023d,
+    id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+    title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+    summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+    banner: '',
+    status: 1,
+    __v: 0 },
+  { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:52:30.750] [DEBUG] info - total: 2
+[2018-03-18T17:52:30.756] [INFO] info - 根据标签id取得标签名称: []
+[2018-03-18T17:52:30.759] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:52:30.762] [DEBUG] info - 文章列表: { total: 2,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [],
+       _id: 5aae283b67a0d9483a66023d,
+       id: '536a6de2-268b-40fe-acf0-298d7ccf2a7f',
+       title: '使用webpack+vue+less开发，使用less-loader，配置全局less变量',
+       summary: 'Less 是一门 CSS 预处理语言,它扩展了 CSS 语言,增加了变量、Mixin、函数等特性，在阅读这篇文章的时候，笔者假设你已经有了一定的less编码经验。以下将不会讲解less的用法。  我们在构建一个页面的时候，会定义一些基本参数，例如主色调，文字颜色，标题颜色，副标题颜色，字体大小等等。 通过统一的参数，可以保证页面整体风格的一致性。  在使用Vue模板进行开发的时候，我们把每个页面组件化，组件内的样式就写在组件自身的<style>标签内。 这时候我们需要引用一个变量，通常的方式是专门定义一个公共的variables.less 然后在每个需要使用这些变量的组件内，使用 @impor',
+       banner: '',
+       status: 1,
+       __v: 0,
+       catalog_name: undefined,
+       tags: [] },
+     { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:52:33.092] [DEBUG] info - article-id: 536a6de2-268b-40fe-acf0-298d7ccf2a7f
+[2018-03-18T17:52:33.110] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:52:33.119] [DEBUG] info - articleArr: [ { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:52:33.121] [DEBUG] info - total: 1
+[2018-03-18T17:52:33.123] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:52:33.127] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:52:35.913] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:52:35.922] [DEBUG] info - articleArr: [ { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:52:35.926] [DEBUG] info - total: 1
+[2018-03-18T17:52:35.935] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:52:35.940] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:52:52.164] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:52:52.172] [DEBUG] info - articleArr: [ { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:52:52.174] [DEBUG] info - total: 1
+[2018-03-18T17:52:52.177] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:52:52.182] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:53:25.476] [DEBUG] info - 104ccaa0-2a92-11e8-9ae4-d776bb904a3f
+[2018-03-18T17:53:25.484] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:53:25.489] [DEBUG] info - { tag_ids: [ '5aae283b67a0d9483a660239' ],
+  _id: 5aae36da9c7bc367a834590f,
+  title: '测试文章',
+  summary: '我是测试文章  ',
+  banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+  catalog_id: '5aae283b67a0d9483a660238',
+  status: 2,
+  create_time: 1521366746186,
+  modify_time: 1521366746186,
+  id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+  __v: 0,
+  catalog_name: '创业与经济',
+  tags: [ { id: '5aae283b67a0d9483a660239', name: 'vue' } ],
+  content: '我是测试文章' }
+[2018-03-18T17:53:28.333] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-03-18T17:53:28.345] [DEBUG] info - articleArr: [ { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:53:28.348] [DEBUG] info - total: 1
+[2018-03-18T17:53:28.353] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:53:28.360] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }
+[2018-03-18T17:55:05.632] [DEBUG] info - 请求参数: { page_size: '10', current_page: '1' }
+[2018-03-18T17:55:05.638] [DEBUG] info - articleArr: [ { tag_ids: [ '5aae283b67a0d9483a660239' ],
+    _id: 5aae36da9c7bc367a834590f,
+    title: '测试文章',
+    summary: '我是测试文章  ',
+    banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+    catalog_id: '5aae283b67a0d9483a660238',
+    status: 2,
+    create_time: 1521366746186,
+    modify_time: 1521366746186,
+    id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+    __v: 0 } ]
+[2018-03-18T17:55:05.639] [DEBUG] info - total: 1
+[2018-03-18T17:55:05.647] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aae283b67a0d9483a660238, name: '创业与经济' } ]
+[2018-03-18T17:55:05.653] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 10,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5aae36da9c7bc367a834590f,
+       title: '测试文章',
+       summary: '我是测试文章  ',
+       banner: 'http://127.0.0.1:9528/upload/0cdcd130-2a92-11e8-9ae4-d776bb904a3f.jpg',
+       catalog_id: '5aae283b67a0d9483a660238',
+       status: 2,
+       create_time: 1521366746186,
+       modify_time: 1521366746186,
+       id: '104ccaa0-2a92-11e8-9ae4-d776bb904a3f',
+       __v: 0,
+       catalog_name: '创业与经济',
+       tags: [Array] } ] }

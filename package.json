@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development supervisor --harmony index.js"
+    "start": "cross-env NODE_ENV=development supervisor --harmony index.js",
+    "dev": "node index.js"
   },
   "keywords": [
     "node"
