@@ -30,6 +30,8 @@ class Article extends BaseControl {
 				return ArticleModel.count({})
 			}
 			let [articleArr, total] = await Promise.all([getArticle(), getCount()])
+			logger.debug('articleArr:', articleArr)
+			logger.debug('total:', total)
 			let articleArrTemp = await this._addCatalogName(articleArr)
 			let article_arr = await this._addTagName(articleArrTemp)
 			let data = {
@@ -132,8 +134,8 @@ class Article extends BaseControl {
 		let arr = []
 		for (let article of articleArr) {
 			let query_ret = await ArticleModel.getCatalogNameById(article.catalog_id)
-			// console.log(obj)
-			let name = query_ret[0].name
+			logger.info('根据标签id取得标签名称:', query_ret)
+			let name = query_ret[0] && query_ret[0].name
 			let article_copy = article.toObject()
 			article_copy.catalog_name = name
 			arr.push(article_copy)
