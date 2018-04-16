@@ -2,10 +2,19 @@ import express from 'express'
 import './mongodb/db.js'
 import config from './config'
 import router from './routes/index.js'
+
 // import winston from 'winston'
 // import expressWinston from 'express-winston'
 import chalk from 'chalk'
 var cookieParser = require('cookie-parser')
+var https = require('https')
+var http = require('http')
+var fs = require('fs')
+// 同步读取密钥和签名证书
+var options = {
+	key: fs.readFileSync('./keys/server.key'),
+	cert: fs.readFileSync('./keys/server.crt')
+}
 // import {
 // 	verify
 // } from './auth/auth'
@@ -47,12 +56,25 @@ router(app)
 app.use(express.static('./public'))
 
 app.get('/', function (req, res) {
-	console.log('Hello World!')
-	res.send('Hello World!')
+	console.log('Hello World!!')
+	res.send('Hello World!!')
 })
-var server = app.listen(config.port, () => {
-	var host = server.address().address
-	var port = server.address().port
 
-	console.log(chalk.blue('Example app listening at http://%s:%s', host, port))
+var httpsServer = https.createServer(options, app)
+var httpServer = http.createServer(app)
+
+// https监听3000端口
+httpsServer.listen(443, () => {
+	console.log(chalk.blue('Example app listening at http://%s:%s', 443))
 })
+// http监听3001端口
+httpServer.listen(config.port, () => {
+	console.log(chalk.blue('Example app listening at http://%s:%s', config.port))
+})
+
+// var server = app.listen(config.port, () => {
+// 	var host = server.address().address
+// 	var port = server.address().port
+
+// 	console.log(chalk.blue('Example app listening at http://%s:%s', host, port))
+// })
