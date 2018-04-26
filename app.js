@@ -11,10 +11,10 @@ var https = require('https')
 var http = require('http')
 var fs = require('fs')
 // 同步读取密钥和签名证书
-var options = {
-	key: fs.readFileSync('./keys/server.key'),
-	cert: fs.readFileSync('./keys/server.crt')
-}
+// var options = {
+// 	key: fs.readFileSync('./keys/214592172780915.key'),
+// 	cert: fs.readFileSync('./keys/214592172780915.pem')
+// }
 // import {
 // 	verify
 // } from './auth/auth'
@@ -60,13 +60,13 @@ app.get('/', function (req, res) {
 	res.send('Hello World!!')
 })
 
-var httpsServer = https.createServer(options, app)
+// var httpsServer = https.createServer(options, app)
 var httpServer = http.createServer(app)
 
 // https监听3000端口
-httpsServer.listen(443, () => {
-	console.log(chalk.blue('Example app listening at http://%s:%s', 443))
-})
+// httpsServer.listen(443, () => {
+// 	console.log(chalk.blue('Example app listening at http://%s:%s', 443))
+// })
 // http监听3001端口
 httpServer.listen(config.port, () => {
 	console.log(chalk.blue('Example app listening at http://%s:%s', config.port))
