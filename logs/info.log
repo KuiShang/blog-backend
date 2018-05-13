@@ -51077,3 +51077,65 @@
   catalog_name: '生活感悟',
   tags: [ { id: '5aa7acd8a23ef017a6f31dbd', name: 'vue' } ],
   content: 'a' }
+[2018-05-13T11:14:05.730] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-05-13T11:14:05.737] [DEBUG] info - articleArr: [ { tag_ids: [ '5aa7acd8a23ef017a6f31dbd' ],
+    _id: 5ab8f3bbe82aba3ccb385305,
+    title: 'a',
+    summary: 'a  ',
+    banner: 'http://127.0.0.1:9528/upload/84da93e0-30f8-11e8-bc9a-957a94746aad.png',
+    catalog_id: '5aa7acd8a23ef017a6f31dbb',
+    status: 2,
+    create_time: 1522070459513,
+    modify_time: 1522070459513,
+    id: '8620f690-30f8-11e8-bc9a-957a94746aad',
+    __v: 0 } ]
+[2018-05-13T11:14:05.738] [DEBUG] info - total: 1
+[2018-05-13T11:14:05.741] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aa7acd8a23ef017a6f31dbb, name: '生活感悟' } ]
+[2018-05-13T11:14:05.742] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5ab8f3bbe82aba3ccb385305,
+       title: 'a',
+       summary: 'a  ',
+       banner: 'http://127.0.0.1:9528/upload/84da93e0-30f8-11e8-bc9a-957a94746aad.png',
+       catalog_id: '5aa7acd8a23ef017a6f31dbb',
+       status: 2,
+       create_time: 1522070459513,
+       modify_time: 1522070459513,
+       id: '8620f690-30f8-11e8-bc9a-957a94746aad',
+       __v: 0,
+       catalog_name: '生活感悟',
+       tags: [Array] } ] }
+[2018-05-13T11:21:10.870] [DEBUG] info - 请求参数: { current_page: '1', page_size: '5' }
+[2018-05-13T11:21:10.871] [DEBUG] info - articleArr: [ { tag_ids: [ '5aa7acd8a23ef017a6f31dbd' ],
+    _id: 5ab8f3bbe82aba3ccb385305,
+    title: 'a',
+    summary: 'a  ',
+    banner: 'http://127.0.0.1:9528/upload/84da93e0-30f8-11e8-bc9a-957a94746aad.png',
+    catalog_id: '5aa7acd8a23ef017a6f31dbb',
+    status: 2,
+    create_time: 1522070459513,
+    modify_time: 1522070459513,
+    id: '8620f690-30f8-11e8-bc9a-957a94746aad',
+    __v: 0 } ]
+[2018-05-13T11:21:10.873] [DEBUG] info - total: 1
+[2018-05-13T11:21:10.875] [INFO] info - 根据标签id取得标签名称: [ { _id: 5aa7acd8a23ef017a6f31dbb, name: '生活感悟' } ]
+[2018-05-13T11:21:10.877] [DEBUG] info - 文章列表: { total: 1,
+  current_page: 1,
+  page_size: 5,
+  data: 
+   [ { tag_ids: [Array],
+       _id: 5ab8f3bbe82aba3ccb385305,
+       title: 'a',
+       summary: 'a  ',
+       banner: 'http://127.0.0.1:9528/upload/84da93e0-30f8-11e8-bc9a-957a94746aad.png',
+       catalog_id: '5aa7acd8a23ef017a6f31dbb',
+       status: 2,
+       create_time: 1522070459513,
+       modify_time: 1522070459513,
+       id: '8620f690-30f8-11e8-bc9a-957a94746aad',
+       __v: 0,
+       catalog_name: '生活感悟',
+       tags: [Array] } ] }

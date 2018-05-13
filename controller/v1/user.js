@@ -65,8 +65,8 @@ class User {
 	async getUserInfo (req, res, next) {
 		console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 		console.log(req.cookies)
-		// let username = req.cookies.user.username
-		let username = 'kk'
+		let username = req.cookies.user.username
+		// let username = 'kk'
 		try {
 			const user = await UserModel.findOne({
 				username
